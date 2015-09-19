@@ -1,0 +1,6 @@
+﻿Este projeto tem o objetivo de mostrar como trabalhar com objetos 1-N para uma modelagem relacional, utilizando ADO.Net.
+
+Neste exemplo utilizei uma dll ConnectionCup que eu mesmo fiz, neste caso o banco deve ser criado como AutoresDB e em localhost.
+
+cassiocosta_
+

@@ -1,0 +1,43 @@
+﻿@model AdoNet_Select_Option_exemplo.Models.Entity.Autor
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+<div>
+
+    <form action="/Home/Create" method="post">
+
+        <div class="form-group">
+            <label class="control-label">Nome</label>
+            <input class="form-control" type="text" name="nome" value="" />
+        </div>
+
+        <div class="form-group">
+            <label>Endereco</label>
+            <input class="form-control" type="text" name="endereco" value="" />
+        </div>
+
+        <div class="form-group">
+            <label>Cidade</label>
+
+
+            <select class="form-control" name="cidade.id">
+                <option value="value">Selecione uma Cidade</option>
+
+
+                @foreach (AdoNet_Select_Option_exemplo.Models.Entity.Cidade item in ViewBag.Cidades)
+                {
+                    <option value="@item.id">@item.nome</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Salvar" class="btn btn-group-justified btn-primary" />
+        </div>
+        </form>
+        </div>

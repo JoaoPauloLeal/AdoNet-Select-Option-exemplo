@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AdoNet_Select_Option_exemplo.Models.Entity.Autor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Adicionar Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>Id Autor</label>
+        </th>
+        <th>
+            <label>Nome</label>
+        </th>
+        <th>
+            <label>Endereço</label>
+        </th>
+        <th>
+            <label>Cidade</label>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <p>@item.id</p>
+            </td>
+            <td>
+                <p>@item.nome</p>
+            </td>
+            <td>
+                <p>@item.endereco</p>
+            </td>
+            <td>
+                <p>@item.cidade.nome</p>
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
+
+
